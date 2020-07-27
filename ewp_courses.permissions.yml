@@ -1,0 +1,44 @@
+add learning opportunity specification entities:
+  title: 'Create new Learning Opportunity Specification entities'
+
+administer learning opportunity specification entities:
+  title: 'Administer Learning Opportunity Specification entities'
+  description: 'Allow to access the administration form to configure Learning Opportunity Specification entities.'
+  restrict access: true
+
+delete learning opportunity specification entities:
+  title: 'Delete Learning Opportunity Specification entities'
+
+edit learning opportunity specification entities:
+  title: 'Edit Learning Opportunity Specification entities'
+
+view published learning opportunity specification entities:
+  title: 'View published Learning Opportunity Specification entities'
+
+view unpublished learning opportunity specification entities:
+  title: 'View unpublished Learning Opportunity Specification entities'
+
+permission_callbacks:
+  - \Drupal\ewp_courses\LoSpecEntityPermissions::generatePermissions
+add learning opportunity instance entities:
+  title: 'Create new Learning Opportunity Instance entities'
+
+administer learning opportunity instance entities:
+  title: 'Administer Learning Opportunity Instance entities'
+  description: 'Allow to access the administration form to configure Learning Opportunity Instance entities.'
+  restrict access: true
+
+delete learning opportunity instance entities:
+  title: 'Delete Learning Opportunity Instance entities'
+
+edit learning opportunity instance entities:
+  title: 'Edit Learning Opportunity Instance entities'
+
+view published learning opportunity instance entities:
+  title: 'View published Learning Opportunity Instance entities'
+
+view unpublished learning opportunity instance entities:
+  title: 'View unpublished Learning Opportunity Instance entities'
+
+permission_callbacks:
+  - \Drupal\ewp_courses\LoInstancePermissions::generatePermissions

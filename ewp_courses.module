@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ * Contains ewp_courses.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ewp_courses_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ewp_courses module.
+    case 'help.page.ewp_courses':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Drupal implementation of the EWP Courses API') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ewp_courses_theme() {
+  $theme = [];
+
+  $theme['ewp_courses'] = [
+    'render element' => 'children',
+  ];
+  $theme['los'] = [
+    'render element' => 'elements',
+    'file' => 'los.page.inc',
+    'template' => 'los',
+  ];
+  $theme['los_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'los.page.inc',
+  ];
+  $theme['loi'] = [
+    'render element' => 'elements',
+    'file' => 'loi.page.inc',
+    'template' => 'loi',
+  ];
+  $theme['loi_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'loi.page.inc',
+  ];
+
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function ewp_courses_theme_suggestions_los(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#los'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'los__' . $sanitized_view_mode;
+  $suggestions[] = 'los__' . $entity->bundle();
+  $suggestions[] = 'los__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'los__' . $entity->id();
+  $suggestions[] = 'los__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function ewp_courses_theme_suggestions_loi(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#loi'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'loi__' . $sanitized_view_mode;
+  $suggestions[] = 'loi__' . $entity->bundle();
+  $suggestions[] = 'loi__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'loi__' . $entity->id();
+  $suggestions[] = 'loi__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

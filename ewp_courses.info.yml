@@ -1,0 +1,11 @@
+name: 'EWP Courses'
+type: module
+description: 'Drupal implementation of the EWP Courses API'
+core: 8.x
+package: 'EWP'
+dependencies:
+  - ewp_core:ewp_core
+  - ewp_academic_term:ewp_academic_term
+  - ewp_contact:ewp_contact
+  - ewp_institutions:ewp_institutions
+  - ewp_ounits:ewp_ounits

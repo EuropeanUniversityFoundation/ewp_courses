@@ -1,0 +1,7 @@
+ewp_courses.admin:
+  path: '/admin/ewp/courses'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'EWP Courses'
+  requirements:
+    _permission: 'administer learning opportunity specification entities'

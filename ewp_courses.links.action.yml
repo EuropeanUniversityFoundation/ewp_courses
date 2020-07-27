@@ -1,0 +1,20 @@
+entity.los.add_form:
+  route_name: entity.los.add_page
+  title: 'Add Learning Opportunity Specification'
+  appears_on:
+    - entity.los.collection
+entity.los_type.add_form:
+  route_name: entity.los_type.add_form
+  title: 'Add Learning Opportunity Specification type'
+  appears_on:
+    - entity.los_type.collection
+entity.loi.add_form:
+  route_name: entity.loi.add_page
+  title: 'Add Learning Opportunity Instance'
+  appears_on:
+    - entity.loi.collection
+entity.loi_type.add_form:
+  route_name: entity.loi_type.add_form
+  title: 'Add Learning Opportunity Instance type'
+  appears_on:
+    - entity.loi_type.collection

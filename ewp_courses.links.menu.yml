@@ -1,0 +1,38 @@
+# EWP Courses menu items definition
+ewp_courses.admin:
+  title: 'EWP Courses API'
+  route_name: ewp_courses.admin
+  description: 'Settings for EWP Courses.'
+  parent: ewp_core.admin
+
+# Learning Opportunity Specification type menu items definition
+entity.los_type.collection:
+  title: 'Learning Opportunity Specification types'
+  route_name: entity.los_type.collection
+  description: 'List Learning Opportunity Specification types'
+  parent: ewp_courses.admin
+  weight: 1
+
+# Learning Opportunity Instance type menu items definition
+entity.loi_type.collection:
+  title: 'Learning Opportunity Instance types'
+  route_name: entity.loi_type.collection
+  description: 'List Learning Opportunity Instance types'
+  parent: ewp_courses.admin
+  weight: 2
+
+# Learning Opportunity Specification menu items definition
+entity.los.collection:
+  title: 'Learning Opportunity Specification list'
+  route_name: entity.los.collection
+  description: 'List Learning Opportunity Specification entities'
+  parent: ewp_courses.admin
+  weight: 3
+
+# Learning Opportunity Instance menu items definition
+entity.loi.collection:
+  title: 'Learning Opportunity Instance list'
+  route_name: entity.loi.collection
+  description: 'List Learning Opportunity Instance entities'
+  parent: ewp_courses.admin
+  weight: 4
