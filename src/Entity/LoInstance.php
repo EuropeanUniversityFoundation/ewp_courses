@@ -123,6 +123,27 @@ class LoInstance extends ContentEntityBase implements LoInstanceInterface {
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(TRUE);
 
+    $fields['loi_id'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('LOI ID'))
+      ->setDescription(t('Unique identifier of this LOI.'))
+      ->setSettings([
+        'max_length' => 50,
+        'text_processing' => 0,
+      ])
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -19
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -19
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setRequired(TRUE);
+
     $fields['status']
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',

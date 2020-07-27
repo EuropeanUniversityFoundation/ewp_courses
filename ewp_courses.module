@@ -6,6 +6,9 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
 
 /**
  * Implements hook_help().
@@ -86,4 +89,81 @@ function ewp_courses_theme_suggestions_loi(array $variables) {
   $suggestions[] = 'loi__' . $entity->id();
   $suggestions[] = 'loi__' . $entity->id() . '__' . $sanitized_view_mode;
   return $suggestions;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ewp_courses_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Prepopulate LOS ID form element
+  if (in_array($form_id, [
+    'los_class_add_form',
+    'los_class_edit_form',
+    'los_course_add_form',
+    'los_course_edit_form',
+    'los_degree_programme_add_form',
+    'los_degree_programme_edit_form',
+    'los_module_add_form',
+    'los_module_edit_form',
+    ])) {
+    $entity = $form_state->getFormObject()->getEntity();
+    $prefix = '';
+    $bundle = $entity->get('type')->target_id;
+    switch ($bundle) {
+      case 'class':
+        $prefix = 'CLS';
+        break;
+      case 'course':
+        $prefix = 'CR';
+        break;
+      case 'degree_programme':
+        $prefix = 'DEP';
+        break;
+      case 'module':
+        $prefix = 'MOD';
+        break;
+      default:
+        $prefix = 'LOS';
+        break;
+    }
+    $uuid = $entity->get('uuid')->value;
+    $form['los_id']['widget'][0]['value']['#default_value'] = $prefix . '/' . $uuid;
+    $form['los_id']['widget']['#disabled'] = TRUE;
+  }
+
+  // Prepopulate LOI ID form element
+  if (in_array($form_id, [
+    'loi_class_add_form',
+    'loi_class_edit_form',
+    'loi_course_add_form',
+    'loi_course_edit_form',
+    'loi_degree_programme_add_form',
+    'loi_degree_programme_edit_form',
+    'loi_module_add_form',
+    'loi_module_edit_form',
+    ])) {
+    $entity = $form_state->getFormObject()->getEntity();
+    $prefix = '';
+    $bundle = $entity->get('type')->target_id;
+    switch ($bundle) {
+      case 'class':
+        $prefix = 'CLSI';
+        break;
+      case 'course':
+        $prefix = 'CRI';
+        break;
+      case 'degree_programme':
+        $prefix = 'DEPI';
+        break;
+      case 'module':
+        $prefix = 'MODI';
+        break;
+      default:
+        $prefix = 'LOI';
+        break;
+    }
+    $uuid = $entity->get('uuid')->value;
+    $form['loi_id']['widget'][0]['value']['#default_value'] = $prefix . '/' . $uuid;
+    $form['loi_id']['widget']['#disabled'] = TRUE;
+  }
 }

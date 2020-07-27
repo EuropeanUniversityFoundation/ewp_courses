@@ -1,6 +1,6 @@
 # EWP Courses menu items definition
 ewp_courses.admin:
-  title: 'EWP Courses API'
+  title: 'EWP Courses'
   route_name: ewp_courses.admin
   description: 'Settings for EWP Courses.'
   parent: ewp_core.admin

@@ -54,7 +54,8 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "collection" = "/admin/ewp/los/list",
  *   },
  *   bundle_entity_type = "los_type",
- *   field_ui_base_route = "entity.los_type.edit_form"
+ *   field_ui_base_route = "entity.los_type.edit_form",
+ *   common_reference_target = TRUE,
  * )
  */
 class LoSpecification extends ContentEntityBase implements LoSpecificationInterface {
@@ -117,6 +118,27 @@ class LoSpecification extends ContentEntityBase implements LoSpecificationInterf
       ->setDisplayOptions('form', [
         'type' => 'string_textfield',
         'weight' => -20
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setRequired(TRUE);
+
+    $fields['los_id'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('LOS ID'))
+      ->setDescription(t('Unique identifier of this LOS.'))
+      ->setSettings([
+        'max_length' => 50,
+        'text_processing' => 0,
+      ])
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -19
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -19
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
