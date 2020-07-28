@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.module
+    - ewp_courses.los_type.module
+    - field.storage.los.specifies
+id: los.module.specifies
+field_name: specifies
+entity_type: los
+bundle: module
+label: Specifies
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:loi'
+  handler_settings:
+    target_bundles:
+      module: module
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.degree_programme
+id: loi.degree_programme.default
+targetEntityType: loi
+bundle: degree_programme
+mode: default
+content:
+  label:
+    type: string_textfield
+    weight: -20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  loi_id:
+    type: string_textfield
+    weight: -19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,90 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.class
+    - field.field.los.class.description
+    - field.field.los.class.hei_id
+    - field.field.los.class.los_code
+    - field.field.los.class.ounit_id
+    - field.field.los.class.specifies
+    - field.field.los.class.title
+    - field.field.los.class.url
+  module:
+    - ewp_core
+id: los.class.default
+targetEntityType: los
+bundle: class
+mode: default
+content:
+  description:
+    weight: -13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_multiline_lang_default
+    region: content
+  hei_id:
+    weight: -17
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  los_code:
+    weight: -18
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  ounit_id:
+    weight: -16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  specifies:
+    weight: -12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  title:
+    weight: -15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_string_lang_default
+    region: content
+  url:
+    weight: -14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_http_lang_default
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: -20
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  los_id:
+    label: inline
+    type: string
+    weight: -19
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

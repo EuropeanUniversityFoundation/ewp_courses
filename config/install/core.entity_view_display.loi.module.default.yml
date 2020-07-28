@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.module
+    - field.field.loi.module.credit
+  module:
+    - ewp_courses
+id: loi.module.default
+targetEntityType: loi
+bundle: module
+mode: default
+content:
+  credit:
+    weight: -18
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_credit_default
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: -20
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  loi_id:
+    label: inline
+    type: string
+    weight: -19
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

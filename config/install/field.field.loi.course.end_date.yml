@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.course
+    - field.storage.loi.end_date
+  module:
+    - datetime
+id: loi.course.end_date
+field_name: end_date
+entity_type: loi
+bundle: course
+label: 'End date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

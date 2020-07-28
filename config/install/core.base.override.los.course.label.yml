@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.course
+id: los.course.label
+field_name: label
+entity_type: los
+bundle: course
+label: Label
+description: 'The internal label of this Course specification.'
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

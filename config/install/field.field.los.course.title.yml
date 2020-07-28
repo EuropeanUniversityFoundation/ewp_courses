@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.course
+    - field.storage.los.title
+  module:
+    - ewp_core
+id: los.course.title
+field_name: title
+entity_type: los
+bundle: course
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ewp_string_lang

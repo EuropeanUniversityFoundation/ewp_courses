@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.course
+    - field.storage.los.subject_area
+  module:
+    - erasmus_subject_area_code
+id: los.course.subject_area
+field_name: subject_area
+entity_type: los
+bundle: course
+label: 'Subject area'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: erasmus_subject_area_code

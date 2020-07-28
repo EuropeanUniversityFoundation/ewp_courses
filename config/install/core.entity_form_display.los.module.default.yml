@@ -1,0 +1,114 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.module
+    - field.field.los.module.contains
+    - field.field.los.module.description
+    - field.field.los.module.hei_id
+    - field.field.los.module.los_code
+    - field.field.los.module.ounit_id
+    - field.field.los.module.specifies
+    - field.field.los.module.title
+    - field.field.los.module.url
+  module:
+    - ewp_core
+id: los.module.default
+targetEntityType: los
+bundle: module
+mode: default
+content:
+  contains:
+    weight: -9
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  description:
+    weight: -11
+    settings:
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+    type: ewp_multiline_lang_default
+    region: content
+  hei_id:
+    weight: -17
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  los_code:
+    weight: -18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  ounit_id:
+    weight: -16
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  specifies:
+    weight: -10
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  title:
+    weight: -15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: ewp_string_lang_default
+    region: content
+  url:
+    weight: -12
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_http_lang_default
+    region: content
+  label:
+    type: string_textfield
+    weight: -20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  los_id:
+    type: string_textfield
+    weight: -19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

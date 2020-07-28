@@ -12,6 +12,10 @@
   },
   "repositories": [
     {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
       "type": "vcs",
       "url": "https://github.com/EuropeanUniversityFoundation/ewp_core"
     },
@@ -41,6 +45,7 @@
     }
   ],
   "require": {
+    "drupal/languagefield": "^1.5",
     "euf/ewp_core": "dev-master",
     "euf/ewp_academic_term": "dev-master",
     "euf/ewp_flexible_address": "dev-master",

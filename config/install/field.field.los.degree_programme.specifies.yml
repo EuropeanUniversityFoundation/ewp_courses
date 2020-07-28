@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.degree_programme
+    - ewp_courses.los_type.degree_programme
+    - field.storage.los.specifies
+id: los.degree_programme.specifies
+field_name: specifies
+entity_type: los
+bundle: degree_programme
+label: Specifies
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:loi'
+  handler_settings:
+    target_bundles:
+      degree_programme: degree_programme
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: course
+field_type: entity_reference

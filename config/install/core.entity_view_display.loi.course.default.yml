@@ -1,0 +1,92 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.course
+    - field.field.loi.course.academic_term
+    - field.field.loi.course.credit
+    - field.field.loi.course.end_date
+    - field.field.loi.course.engagement_hours
+    - field.field.loi.course.language_of_instruction
+    - field.field.loi.course.start_date
+  module:
+    - datetime
+    - ewp_courses
+    - languagefield
+id: loi.course.default
+targetEntityType: loi
+bundle: course
+mode: default
+content:
+  academic_term:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  credit:
+    weight: 5
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_credit_default
+    region: content
+  end_date:
+    weight: 3
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  engagement_hours:
+    weight: 7
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 1
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  language_of_instruction:
+    weight: 6
+    label: inline
+    settings:
+      link_to_entity: false
+      format:
+        name: name
+    third_party_settings: {  }
+    type: languagefield_default
+    region: content
+  start_date:
+    weight: 2
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  loi_id:
+    label: inline
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

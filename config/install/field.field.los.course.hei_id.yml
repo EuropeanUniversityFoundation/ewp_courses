@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.course
+    - field.storage.los.hei_id
+id: los.course.hei_id
+field_name: hei_id
+entity_type: los
+bundle: course
+label: Institution
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:hei'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

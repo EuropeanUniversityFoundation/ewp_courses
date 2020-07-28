@@ -1,0 +1,68 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.class
+    - field.field.loi.class.end_date
+    - field.field.loi.class.engagement_hours
+    - field.field.loi.class.language_of_instruction
+    - field.field.loi.class.start_date
+  module:
+    - datetime
+    - languagefield
+id: loi.class.default
+targetEntityType: loi
+bundle: class
+mode: default
+content:
+  end_date:
+    weight: -15
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  engagement_hours:
+    weight: -9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  language_of_instruction:
+    weight: -10
+    settings:
+      format:
+        name: name
+    third_party_settings: {  }
+    type: languagefield_select
+    region: content
+  start_date:
+    weight: -16
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  label:
+    type: string_textfield
+    weight: -20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  loi_id:
+    type: string_textfield
+    weight: -19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

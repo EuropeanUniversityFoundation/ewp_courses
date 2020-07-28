@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.degree_programme
+    - field.storage.los.eqf_level_provided
+  module:
+    - ewp_core
+id: los.degree_programme.eqf_level_provided
+field_name: eqf_level_provided
+entity_type: los
+bundle: degree_programme
+label: 'EQF level provided'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: eqf_level

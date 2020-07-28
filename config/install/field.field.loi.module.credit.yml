@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.module
+    - field.storage.loi.credit
+  module:
+    - ewp_courses
+id: loi.module.credit
+field_name: credit
+entity_type: loi
+bundle: module
+label: Credit
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ewp_credit

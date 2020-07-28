@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.class
+    - field.storage.loi.engagement_hours
+id: loi.class.engagement_hours
+field_name: engagement_hours
+entity_type: loi
+bundle: class
+label: 'Engagement hours'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: hour|hours
+field_type: decimal

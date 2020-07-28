@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ewp_academic_term
+    - ewp_courses
+id: loi.academic_term
+field_name: academic_term
+entity_type: loi
+type: entity_reference
+settings:
+  target_type: academic_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

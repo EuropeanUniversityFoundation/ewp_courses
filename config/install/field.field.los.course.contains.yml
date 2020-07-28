@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.class
+    - ewp_courses.los_type.course
+    - field.storage.los.contains
+id: los.course.contains
+field_name: contains
+entity_type: los
+bundle: course
+label: Contains
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:los'
+  handler_settings:
+    target_bundles:
+      class: class
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

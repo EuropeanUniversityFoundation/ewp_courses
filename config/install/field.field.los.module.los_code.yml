@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.module
+    - field.storage.los.los_code
+id: los.module.los_code
+field_name: los_code
+entity_type: los
+bundle: module
+label: 'LOS code'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ewp_courses
+id: loi.credit
+field_name: credit
+entity_type: loi
+type: ewp_credit
+settings:
+  precision: '10'
+  scale: '1'
+  max_length: '255'
+module: ewp_courses
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,129 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.degree_programme
+    - field.field.los.degree_programme.contains
+    - field.field.los.degree_programme.description
+    - field.field.los.degree_programme.eqf_level_provided
+    - field.field.los.degree_programme.hei_id
+    - field.field.los.degree_programme.isced_code
+    - field.field.los.degree_programme.los_code
+    - field.field.los.degree_programme.ounit_id
+    - field.field.los.degree_programme.specifies
+    - field.field.los.degree_programme.title
+    - field.field.los.degree_programme.url
+  module:
+    - ewp_core
+    - isced_code
+id: los.degree_programme.default
+targetEntityType: los
+bundle: degree_programme
+mode: default
+content:
+  contains:
+    weight: -9
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  description:
+    weight: -11
+    settings:
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+    type: ewp_multiline_lang_default
+    region: content
+  eqf_level_provided:
+    weight: -13
+    settings: {  }
+    third_party_settings: {  }
+    type: eqf_level_default
+    region: content
+  hei_id:
+    weight: -17
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  isced_code:
+    weight: -14
+    settings: {  }
+    third_party_settings: {  }
+    type: isced_code_default
+    region: content
+  los_code:
+    weight: -18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  ounit_id:
+    weight: -16
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  specifies:
+    weight: -10
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  title:
+    weight: -15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: ewp_string_lang_default
+    region: content
+  url:
+    weight: -12
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_http_lang_default
+    region: content
+  label:
+    type: string_textfield
+    weight: -20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  los_id:
+    type: string_textfield
+    weight: -19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

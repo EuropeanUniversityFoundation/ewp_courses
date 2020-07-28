@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.loi_type.module
+id: loi.module.label
+field_name: label
+entity_type: loi
+bundle: module
+label: Label
+description: 'The internal label of this Module instance.'
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ewp_courses.los_type.degree_programme
+    - field.storage.los.isced_code
+  module:
+    - isced_code
+id: los.degree_programme.isced_code
+field_name: isced_code
+entity_type: los
+bundle: degree_programme
+label: 'ISCED code'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: isced_code
