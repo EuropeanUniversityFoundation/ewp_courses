@@ -104,7 +104,7 @@ class LoSpecification extends ContentEntityBase implements LoSpecificationInterf
 
     $fields['label'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Label'))
-      ->setDescription(t('The internal label of the Learning Opportunity Specification entity.'))
+      ->setDescription(t('The internal label of this specification.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,

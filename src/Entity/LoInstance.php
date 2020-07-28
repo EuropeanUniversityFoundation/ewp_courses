@@ -104,7 +104,7 @@ class LoInstance extends ContentEntityBase implements LoInstanceInterface {
 
     $fields['label'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Label'))
-      ->setDescription(t('The internal label of the Learning Opportunity Instance entity.'))
+      ->setDescription(t('The internal label of this instance.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,

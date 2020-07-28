@@ -9,6 +9,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Field\BaseFieldOverride;
 
 /**
  * Implements hook_help().
@@ -131,7 +132,7 @@ function ewp_courses_form_alter(&$form, FormStateInterface $form_state, $form_id
     $form['los_id']['widget']['#disabled'] = TRUE;
   }
 
-  // Prepopulate LOI ID form element
+  // Prepopulate Label and LOI ID form element
   if (in_array($form_id, [
     'loi_class_add_form',
     'loi_class_edit_form',
@@ -163,6 +164,7 @@ function ewp_courses_form_alter(&$form, FormStateInterface $form_state, $form_id
         break;
     }
     $uuid = $entity->get('uuid')->value;
+    $form['label']['widget'][0]['value']['#default_value'] = $prefix . '/' . $uuid;
     $form['loi_id']['widget'][0]['value']['#default_value'] = $prefix . '/' . $uuid;
     $form['loi_id']['widget']['#disabled'] = TRUE;
   }
