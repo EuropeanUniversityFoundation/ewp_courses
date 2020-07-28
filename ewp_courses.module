@@ -123,6 +123,7 @@ function ewp_courses_form_alter(&$form, FormStateInterface $form_state, $form_id
       case 'module':
         $prefix = 'MOD';
         break;
+      // this would never occur, but in any case...
       default:
         $prefix = 'LOS';
         break;
@@ -159,6 +160,7 @@ function ewp_courses_form_alter(&$form, FormStateInterface $form_state, $form_id
       case 'module':
         $prefix = 'MODI';
         break;
+      // this would never occur, but in any case...
       default:
         $prefix = 'LOI';
         break;

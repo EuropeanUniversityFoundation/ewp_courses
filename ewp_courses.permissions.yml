@@ -19,7 +19,7 @@ view unpublished learning opportunity specification entities:
   title: 'View unpublished Learning Opportunity Specification entities'
 
 permission_callbacks:
-  - \Drupal\ewp_courses\LoSpecEntityPermissions::generatePermissions
+  - \Drupal\ewp_courses\LoSpecificationPermissions::generatePermissions
 add learning opportunity instance entities:
   title: 'Create new Learning Opportunity Instance entities'
 
