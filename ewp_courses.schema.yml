@@ -1,0 +1,23 @@
+field.storage_settings.ewp_credit:
+  type: mapping
+  label: 'Storage settings'
+  mapping:
+    precision:
+      type: numeric
+      label: 'Precision'
+    scale:
+      type: numeric
+      label: 'Scale'
+    max_length:
+      type: numeric
+      label: 'Maximum length'
+field.widget.settings.ewp_credit_default:
+  type: mapping
+  label: 'Default widget settings'
+  mapping:
+    value_placeholder:
+      type: textfield
+      label: 'Placeholder for value'
+    scheme_placeholder:
+      type: textfield
+      label: 'Placeholder for scheme'
