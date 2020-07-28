@@ -5,19 +5,48 @@ ewp_courses.admin:
   description: 'Settings for EWP Courses.'
   parent: ewp_core.admin
 
+# Learning Opportunity Specification add page and forms
+entity.los.add_page:
+  title: 'Add Learning Opportunity Specification'
+  route_name: entity.los.add_page
+  description: 'Add Learning Opportunity Specification'
+  parent: ewp_courses.admin
+  weight: 1
+
+entity.los.class.add_form:
+  title: 'Add Class'
+  route_name: entity.los.add_form
+  route_parameters: {los_type: 'class'}
+  description: 'Add Class'
+  parent: entity.los.add_page
+  weight: 1
+entity.los.course.add_form:
+  title: 'Add Course'
+  route_name: entity.los.add_form
+  route_parameters: {los_type: 'course'}
+  description: 'Add Course'
+  parent: entity.los.add_page
+  weight: 2
+entity.los.degree_programme.add_form:
+  title: 'Add Degree Programme'
+  route_name: entity.los.add_form
+  route_parameters: {los_type: 'degree_programme'}
+  description: 'Add Degree Programme'
+  parent: entity.los.add_page
+  weight: 3
+entity.los.module.add_form:
+  title: 'Add Module'
+  route_name: entity.los.add_form
+  route_parameters: {los_type: 'module'}
+  description: 'Add Module'
+  parent: entity.los.add_page
+  weight: 4
+
 # Learning Opportunity Specification type menu items definition
 entity.los_type.collection:
   title: 'Learning Opportunity Specification types'
   route_name: entity.los_type.collection
   description: 'List Learning Opportunity Specification types'
-  parent: ewp_courses.admin
-  weight: 1
-
-# Learning Opportunity Instance type menu items definition
-entity.loi_type.collection:
-  title: 'Learning Opportunity Instance types'
-  route_name: entity.loi_type.collection
-  description: 'List Learning Opportunity Instance types'
   parent: ewp_courses.admin
   weight: 2
 
@@ -29,10 +58,55 @@ entity.los.collection:
   parent: ewp_courses.admin
   weight: 3
 
+# Learning Opportunity Instance add page and forms
+entity.loi.add_page:
+  title: 'Add Learning Opportunity Instance'
+  route_name: entity.loi.add_page
+  description: 'Add Learning Opportunity Instance'
+  parent: ewp_courses.admin
+  weight: 4
+
+entity.loi.class.add_form:
+  title: 'Add Class'
+  route_name: entity.loi.add_form
+  route_parameters: {loi_type: 'class'}
+  description: 'Add Class'
+  parent: entity.loi.add_page
+  weight: 1
+entity.loi.course.add_form:
+  title: 'Add Course'
+  route_name: entity.loi.add_form
+  route_parameters: {loi_type: 'course'}
+  description: 'Add Course'
+  parent: entity.loi.add_page
+  weight: 2
+entity.loi.degree_programme.add_form:
+  title: 'Add Degree Programme'
+  route_name: entity.loi.add_form
+  route_parameters: {loi_type: 'degree_programme'}
+  description: 'Add Degree Programme'
+  parent: entity.loi.add_page
+  weight: 3
+entity.loi.module.add_form:
+  title: 'Add Module'
+  route_name: entity.loi.add_form
+  route_parameters: {loi_type: 'module'}
+  description: 'Add Module'
+  parent: entity.loi.add_page
+  weight: 4
+
+# Learning Opportunity Instance type menu items definition
+entity.loi_type.collection:
+  title: 'Learning Opportunity Instance types'
+  route_name: entity.loi_type.collection
+  description: 'List Learning Opportunity Instance types'
+  parent: ewp_courses.admin
+  weight: 5
+
 # Learning Opportunity Instance menu items definition
 entity.loi.collection:
   title: 'Learning Opportunity Instance list'
   route_name: entity.loi.collection
   description: 'List Learning Opportunity Instance entities'
   parent: ewp_courses.admin
-  weight: 4
+  weight: 6

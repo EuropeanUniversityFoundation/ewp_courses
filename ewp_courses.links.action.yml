@@ -1,18 +1,71 @@
-entity.los.add_form:
-  route_name: entity.los.add_page
-  title: 'Add Learning Opportunity Specification'
+# Specification
+# entity.los.add_form:
+#   route_name: entity.los.add_page
+#   title: 'Add Learning Opportunity Specification'
+#   appears_on:
+#     - entity.los.collection
+entity.los.class.add_form:
+  route_name: entity.los.add_form
+  route_parameters: {los_type: 'class'}
+  title: 'Add Class'
   appears_on:
     - entity.los.collection
+entity.los.course.add_form:
+  route_name: entity.los.add_form
+  route_parameters: {los_type: 'course'}
+  title: 'Add Course'
+  appears_on:
+    - entity.los.collection
+entity.los.degree_programme.add_form:
+  route_name: entity.los.add_form
+  route_parameters: {los_type: 'degree_programme'}
+  title: 'Add Degree Programme'
+  appears_on:
+    - entity.los.collection
+entity.los.module.add_form:
+  route_name: entity.los.add_form
+  route_parameters: {los_type: 'module'}
+  title: 'Add Module'
+  appears_on:
+    - entity.los.collection
+
+# Instance
+# entity.loi.add_form:
+#   route_name: entity.loi.add_page
+#   title: 'Add Learning Opportunity Instance'
+#   appears_on:
+#     - entity.loi.collection
+entity.loi.class.add_form:
+  route_name: entity.loi.add_form
+  route_parameters: {loi_type: 'class'}
+  title: 'Add Class'
+  appears_on:
+    - entity.loi.collection
+entity.loi.course.add_form:
+  route_name: entity.loi.add_form
+  route_parameters: {loi_type: 'course'}
+  title: 'Add Course'
+  appears_on:
+    - entity.loi.collection
+entity.loi.degree_programme.add_form:
+  route_name: entity.loi.add_form
+  route_parameters: {loi_type: 'degree_programme'}
+  title: 'Add Degree Programme'
+  appears_on:
+    - entity.loi.collection
+entity.loi.module.add_form:
+  route_name: entity.loi.add_form
+  route_parameters: {loi_type: 'module'}
+  title: 'Add Module'
+  appears_on:
+    - entity.loi.collection
+
+# Types
 entity.los_type.add_form:
   route_name: entity.los_type.add_form
   title: 'Add Learning Opportunity Specification type'
   appears_on:
     - entity.los_type.collection
-entity.loi.add_form:
-  route_name: entity.loi.add_page
-  title: 'Add Learning Opportunity Instance'
-  appears_on:
-    - entity.loi.collection
 entity.loi_type.add_form:
   route_name: entity.loi_type.add_form
   title: 'Add Learning Opportunity Instance type'
