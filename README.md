@@ -28,4 +28,4 @@ Finally, install the module:
 
 ## Usage
 
-Two custom content entities named **Learning Opportunity Specification** and **Learning Opportunity Instance** are provided with initial configuration to match the EWP specification. They can be configured like any other fieldable entity on the system. The administration paths are placed under `/admin/ewp/`.
+Two custom content entities named **Learning Opportunity Specification** and **Learning Opportunity Instance** are provided with bundles (including **Course**, **Class**, **Module** and **Degree Programme**) and initial configuration to match the EWP specification. They can be configured like any other fieldable entity on the system. The administration paths are placed under `/admin/ewp/`.
