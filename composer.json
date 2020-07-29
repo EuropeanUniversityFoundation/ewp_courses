@@ -1,5 +1,5 @@
 {
-  "name": "ewp_courses",
+  "name": "euf/ewp_courses",
   "type": "drupal-module",
   "description": "Drupal implementation of the EWP Courses API",
   "keywords": [
