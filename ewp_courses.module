@@ -57,6 +57,10 @@ function ewp_courses_theme() {
     'file' => 'loi.page.inc',
   ];
 
+  $theme['ewp_credit_default'] = [
+    'variables' => ['value' => NULL, 'scheme' => NULL, 'level' => NULL],
+  ];
+
   return $theme;
 }
 

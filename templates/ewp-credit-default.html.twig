@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a Credit element.
+ *
+ * Available variables:
+ * - value: the snumber of credits;
+ * - scheme: the credit scheme;
+ * - level: the educational level (optional).
+ *
+ * @see template_preprocess()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ value }} {{ scheme }}{% if level %} <small>({{ level }})</small>{% endif %}

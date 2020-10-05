@@ -9,17 +9,17 @@ use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Plugin implementation of the 'ewp_credit_default' formatter.
+ * Plugin implementation of the 'ewp_credit_simple' formatter.
  *
  * @FieldFormatter(
- *   id = "ewp_credit_default",
- *   label = @Translation("Default"),
+ *   id = "ewp_credit_simple",
+ *   label = @Translation("Simple (plain text)"),
  *   field_types = {
  *     "ewp_credit"
  *   }
  * )
  */
-class CreditDefaultFormatter extends FormatterBase {
+class CreditSimpleFormatter extends FormatterBase {
 
   /**
    * {@inheritdoc}
@@ -56,18 +56,27 @@ class CreditDefaultFormatter extends FormatterBase {
     $elements = [];
 
     foreach ($items as $delta => $item) {
-      $level_list = ['ba' => t('Bachelor'),'ma' => t('Masters'),'phd' => t('PhD')];
-      $level_key = $item->level;
-      $level = ($level_key) ? $level_list[$level_key] : NULL;
-      $elements[$delta] = [
-        '#theme' => 'ewp_credit_default',
-        '#value' => $item->value,
-        '#scheme' => $item->scheme,
-        '#level' => $level,
-      ];
+      $elements[$delta] = ['#markup' => $this->viewValue($item)];
     }
 
     return $elements;
+  }
+
+  /**
+   * Generate the output appropriate for one field item.
+   *
+   * @param \Drupal\Core\Field\FieldItemInterface $item
+   *   One field item.
+   *
+   * @return string
+   *   The textual output generated.
+   */
+  protected function viewValue(FieldItemInterface $item) {
+    $output = '';
+    $value = $item->value;
+    $scheme = $item->scheme;
+    $output = $value . ' ' . $scheme;
+    return $output;
   }
 
 }
