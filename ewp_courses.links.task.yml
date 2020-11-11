@@ -15,6 +15,17 @@ entity.los.delete_form:
   base_route:  entity.los.canonical
   title: Delete
   weight: 10
+
+entity.los_type.edit_form:
+  title: 'Edit'
+  route_name: entity.los_type.edit_form
+  base_route: entity.los_type.edit_form
+
+entity.los_type.collection:
+  title: List
+  route_name: entity.los_type.collection
+  base_route: entity.los_type.collection
+
 # Learning Opportunity Instance routing definition
 
 entity.loi.canonical:
@@ -32,3 +43,13 @@ entity.loi.delete_form:
   base_route:  entity.loi.canonical
   title: Delete
   weight: 10
+
+entity.loi_type.edit_form:
+  title: 'Edit'
+  route_name: entity.loi_type.edit_form
+  base_route: entity.loi_type.edit_form
+
+entity.loi_type.collection:
+  title: List
+  route_name: entity.loi_type.collection
+  base_route: entity.loi_type.collection

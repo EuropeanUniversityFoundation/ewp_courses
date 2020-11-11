@@ -20,7 +20,7 @@ use Drupal\Core\Render\Element;
  *   - attributes: HTML attributes for the containing element.
  */
 function template_preprocess_los(array &$variables) {
-  // Fetch LoSpecEntity Entity Object.
+  // Fetch LoSpecification Entity Object.
   $los = $variables['elements']['#los'];
   //provide the label
   $variables['label'] = $los->label();
