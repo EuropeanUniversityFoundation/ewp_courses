@@ -22,6 +22,12 @@ use Drupal\Core\Render\Element;
 function template_preprocess_los(array &$variables) {
   // Fetch LoSpecEntity Entity Object.
   $los = $variables['elements']['#los'];
+  //provide the label
+  $variables['label'] = $los->label();
+  //provide the alias
+  $variables['url'] = $los->toUrl()->toString();
+  //provide the view mode
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
 
   // Helpful $content variable for templates.
   foreach (Element::children($variables['elements']) as $key) {

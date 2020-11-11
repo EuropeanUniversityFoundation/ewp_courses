@@ -22,6 +22,12 @@ use Drupal\Core\Render\Element;
 function template_preprocess_loi(array &$variables) {
   // Fetch LoInstance Entity Object.
   $loi = $variables['elements']['#loi'];
+  //provide the label
+  $variables['label'] = $loi->label();
+  //provide the alias
+  $variables['url'] = $loi->toUrl()->toString();
+  //provide the view mode
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
 
   // Helpful $content variable for templates.
   foreach (Element::children($variables['elements']) as $key) {
