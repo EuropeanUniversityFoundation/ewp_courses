@@ -106,7 +106,7 @@ class LoInstance extends ContentEntityBase implements LoInstanceInterface {
       ->setLabel(t('Label'))
       ->setDescription(t('The internal label of this instance.'))
       ->setSettings([
-        'max_length' => 50,
+        'max_length' => 255,
         'text_processing' => 0,
       ])
       ->setDefaultValue('')

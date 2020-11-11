@@ -1,0 +1,75 @@
+<?php
+
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Increase the max length of the LOS entity label to 255 characters.
+ */
+function ewp_courses_update_8101() {
+  $field_spec = [
+    'type' => 'varchar',
+    'length' => '255',
+    'not null' => TRUE,
+  ];
+  \Drupal::database()->schema()->changeField('los', 'label', 'label', $field_spec);
+
+  $definition = BaseFieldDefinition::create('string')
+    ->setLabel(t('Label'))
+    ->setDescription(t('The internal label of this specification.'))
+    ->setSettings([
+      'max_length' => 255,
+      'text_processing' => 0,
+    ])
+    ->setDefaultValue('')
+    ->setDisplayOptions('view', [
+      'label' => 'above',
+      'type' => 'string',
+      'weight' => -20
+    ])
+    ->setDisplayOptions('form', [
+      'type' => 'string_textfield',
+      'weight' => -20
+    ])
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE)
+    ->setRequired(TRUE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('label', 'los', 'los', $definition);
+}
+
+/**
+ * Increase the max length of the LOI entity label to 255 characters.
+ */
+function ewp_courses_update_8102() {
+  $field_spec = [
+    'type' => 'varchar',
+    'length' => '255',
+    'not null' => TRUE,
+  ];
+  \Drupal::database()->schema()->changeField('loi', 'label', 'label', $field_spec);
+
+  $definition = BaseFieldDefinition::create('string')
+    ->setLabel(t('Label'))
+    ->setDescription(t('The internal label of this instance.'))
+    ->setSettings([
+      'max_length' => 255,
+      'text_processing' => 0,
+    ])
+    ->setDefaultValue('')
+    ->setDisplayOptions('view', [
+      'label' => 'above',
+      'type' => 'string',
+      'weight' => -20,
+    ])
+    ->setDisplayOptions('form', [
+      'type' => 'string_textfield',
+      'weight' => -20,
+    ])
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE)
+    ->setRequired(TRUE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('label', 'loi', 'loi', $definition);
+}
