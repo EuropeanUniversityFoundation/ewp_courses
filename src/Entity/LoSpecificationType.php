@@ -30,6 +30,11 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     "label" = "label",
  *     "uuid" = "uuid"
  *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *     "uuid"
+ *   },
  *   links = {
  *     "canonical" = "/admin/ewp/los_type/{los_type}",
  *     "add-form" = "/admin/ewp/los_type/add",
