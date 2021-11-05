@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - ewp_courses
+  enforced:
+    module:
+      - ewp_courses
 id: los.specifies
 field_name: specifies
 entity_type: los

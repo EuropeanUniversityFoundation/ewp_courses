@@ -4,6 +4,9 @@ dependencies:
   module:
     - datetime
     - ewp_courses
+  enforced:
+    module:
+      - ewp_courses
 id: loi.end_date
 field_name: end_date
 entity_type: loi

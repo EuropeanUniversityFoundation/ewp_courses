@@ -4,6 +4,9 @@ dependencies:
   module:
     - ewp_core
     - ewp_courses
+  enforced:
+    module:
+      - ewp_courses
 id: los.eqf_level_provided
 field_name: eqf_level_provided
 entity_type: los

@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - ewp_courses
+  enforced:
+    module:
+      - ewp_courses
 id: loi.credit
 field_name: credit
 entity_type: loi

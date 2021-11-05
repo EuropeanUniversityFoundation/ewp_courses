@@ -4,6 +4,9 @@ dependencies:
   module:
     - ewp_courses
     - languagefield
+  enforced:
+    module:
+      - ewp_courses
 id: loi.language_of_instruction
 field_name: language_of_instruction
 entity_type: loi

@@ -4,6 +4,9 @@ dependencies:
   module:
     - ewp_courses
     - ewp_institutions
+  enforced:
+    module:
+      - ewp_courses
 id: los.hei_id
 field_name: hei_id
 entity_type: los

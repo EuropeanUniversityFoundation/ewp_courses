@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - ewp_courses
+  enforced:
+    module:
+      - ewp_courses
 id: loi.engagement_hours
 field_name: engagement_hours
 entity_type: loi

@@ -4,6 +4,9 @@ dependencies:
   module:
     - ewp_courses
     - isced_code
+  enforced:
+    module:
+      - ewp_courses
 id: los.isced_code
 field_name: isced_code
 entity_type: los

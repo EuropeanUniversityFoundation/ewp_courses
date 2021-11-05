@@ -4,6 +4,9 @@ dependencies:
   module:
     - ewp_core
     - ewp_courses
+  enforced:
+    module:
+      - ewp_courses
 id: los.title
 field_name: title
 entity_type: los

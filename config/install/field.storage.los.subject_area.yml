@@ -4,6 +4,9 @@ dependencies:
   module:
     - erasmus_subject_area_code
     - ewp_courses
+  enforced:
+    module:
+      - ewp_courses
 id: los.subject_area
 field_name: subject_area
 entity_type: los

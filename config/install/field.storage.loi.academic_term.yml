@@ -4,6 +4,9 @@ dependencies:
   module:
     - ewp_academic_term
     - ewp_courses
+  enforced:
+    module:
+      - ewp_courses
 id: loi.academic_term
 field_name: academic_term
 entity_type: loi
