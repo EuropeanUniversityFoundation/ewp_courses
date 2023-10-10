@@ -1,7 +1,7 @@
 name: 'EWP Courses'
 type: module
 description: 'Drupal implementation of the EWP Courses API'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 package: 'EWP'
 dependencies:
   - languagefield:languagefield
