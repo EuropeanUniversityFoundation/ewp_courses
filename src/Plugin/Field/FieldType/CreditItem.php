@@ -16,8 +16,11 @@ use Drupal\Core\TypedData\DataDefinition;
  * @FieldType(
  *   id = "ewp_credit",
  *   label = @Translation("Credit"),
- *   description = @Translation("Auxiliary definition of Course Instance Credit"),
- *   category = "EWP Courses",
+ *   description = {
+ *     @Translation("Stores a number of credits and related credit scheme."),
+ *     @Translation("Allows indication of academic level."),
+ *   },
+ *   category = "ewp_core",
  *   default_widget = "ewp_credit_default",
  *   default_formatter = "ewp_credit_default"
  * )
