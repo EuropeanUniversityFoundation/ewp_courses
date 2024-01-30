@@ -23,12 +23,12 @@
     ],
     "require": {
         "drupal/languagefield": "^1.9",
-        "euf/erasmus_subject_area_code": "^1.0@beta",
-        "euf/ewp_academic_term": "^1.0@beta",
-        "euf/ewp_core": "^1.0@beta",
-        "euf/ewp_institutions": "^1.0@beta",
-        "euf/ewp_ounits": "^1.0@beta",
-        "euf/isced_code": "^1.0@beta"
+        "euf/erasmus_subject_area_code": "^1.0",
+        "euf/ewp_academic_term": "^1.0",
+        "euf/ewp_core": "^1.0",
+        "euf/ewp_institutions": "^1.0",
+        "euf/ewp_ounits": "^1.0",
+        "euf/isced_code": "^1.0"
     },
     "minimum-stability": "dev",
     "repositories": [
